@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  height: 100vh; }
+
+body {
+  font-family: 'Press Start 2P', sans-serif;
+  color: #eee;
+  background-color: #222;
+  /* background-color: #60b347; */ }
+
+.header {
+  position: relative;
+  border-bottom: 7px solid #eee;
+  text-align: center;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column; }
+  .header__description {
+    padding: 2rem;
+    display: block;
+    color: red; }
+  .header__again {
+    margin: auto;
+    width: 12rem; }
+    .header__again.active {
+      animation: pulse 2s infinite; }
+  .header__number {
+    margin: auto;
+    background: #eee;
+    color: #333;
+    font-size: 6rem;
+    width: 15rem;
+    padding: 3rem 0rem;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    border-radius: 5px; }
+    .header__number.active {
+      border: 1rem dashed black;
+      -webkit-animation: rotate 2s linear infinite, borpulse 2s linear infinite; }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  align-items: center; }
+  .main__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .main__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .main__guess {
+    margin: auto;
+    background: #eee;
+    color: #333;
+    font-size: 6rem;
+    width: 15rem;
+    padding: 3rem 0rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-radius: 5px;
+    font-family: inherit; }
+    .main__guess.active {
+      border: 1rem dashed black;
+      -webkit-animation: rotate2 2s linear infinite, borpulse 2s linear infinite; }
+  .main__check {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    height: auto;
+    width: auto; }
+    .main__check.active {
+      animation: pulse 2s infinite; }
+  .main__message {
+    font-size: 2rem;
+    white-space: nowrap;
+    margin-top: 2rem; }
+
+.btn {
+  border: none;
+  background-color: #eee;
+  color: #222;
+  padding: 1.5rem 2rem;
+  font-family: inherit;
+  border-radius: 5px;
+  cursor: pointer; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    color: red; }
+  70% {
+    transform: scale(1);
+    color: green; }
+  100% {
+    transform: scale(0.95);
+    color: red; } }
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(180deg); } }
+
+@-webkit-keyframes rotate2 {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-180deg); } }
+
+@keyframes borpulse {
+  0% {
+    border-color: #00ff15; }
+  70% {
+    border-color: grey; }
+  100% {
+    border-color: #0dff00; } }
