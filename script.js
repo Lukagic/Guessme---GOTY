@@ -27,6 +27,16 @@ const displayMessage = function (message) {
   document.querySelector('.main__message').textContent = message;
 };
 
+//enter key functionality
+const input = document.querySelector('.main__guess');
+console.log('hey');
+
+input.addEventListener('keyup', function (event) {
+  if (event.keyCode === 13) {
+    document.querySelector('.main__check').click();
+  }
+});
+
 // let results = [];
 
 // let currentHighscore = calcMaxScore(results);
